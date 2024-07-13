@@ -5,6 +5,7 @@ void ToDoList::AddTask(const string& description, const string& dueDate)
 {
 	Task newTask = { nextId++,description,dueDate ,false };
 	tasks.push_back(newTask);
+    cout << "Task Added successfully\n";
 }
 
 void ToDoList::RemoveTask(int id)
@@ -24,6 +25,7 @@ void ToDoList::MarkTaskAsCompleted(int id)
 {
     for (auto& task : tasks) {
         if (task.id == id) {
+            cout << "Done!\n";
             task.isCompleted = true;
             return;
         }
